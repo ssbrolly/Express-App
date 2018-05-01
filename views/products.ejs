@@ -2,6 +2,7 @@
 <h1>Products</h1>
 <table>
   <thead>
+    <th>View</th>
     <th>Name</th>
     <th>Price</th>
     <th>Description</th>
@@ -9,6 +10,9 @@
   <tbody>
     <% products.forEach( function(product) { %>
       <tr>
+        <td>
+          <a href=<%= '/products/' + product.id %> >Show</a>
+        </td>
         <td><%= product.name %></td>
         <td>$<%= product.base_price %></td>
         <td><%= product.description %></td>
